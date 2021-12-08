@@ -59,9 +59,57 @@ fact2(10)
 
 n <- 10
 s <- n
-s <- s - n*(n+1)
-s <- s + n*(n+1)*(2*n+1) / 3
+s <- s 
+s <- (n*(n+1)*(2*n+1)/3) - n*(n+1) + n
 s
 
+n <- 4
+s <- (2*(n^3) + n) / 3
+s
 
+# 2.7
+perm1 <- function (n, r) {
+    perm <- 1
+    for (i in (n-r+1):n) {
+        perm <- perm * i
+    }
+    return (perm)
+}
+
+perm1(10, 2)
+
+# 2.8
+perm2 <- function (n, r) {
+    return (fact(n) / fact(n - r))
+}
+
+perm2(10, 2)
+
+# 2.9
+comb1 <- function (n, r) {
+    return (perm1(n, r) / fact(r))
+}
+
+comb1(10, 2)
+
+comb2 <- function (n, r) {
+    return (fact(n) / fact(r) / fact(n - r))
+}
+
+comb2(10, 2)
+
+# 2.10
+comb3 <- function (n, r) {
+    if (r == 0 || r == n)
+        return (1)
+    else
+        return (comb3(n - 1, r) + comb3(n - 1, r - 1))
+}
+
+comb3(10, 2)
+
+# 2.11
+comb1(45, 6)
+comb2(45, 6)
+comb3(45, 6)
 
