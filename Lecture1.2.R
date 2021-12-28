@@ -110,3 +110,40 @@ comb3(10, 2)
 comb1(45, 6)
 comb2(45, 6)
 comb3(45, 6)
+
+# 2.12
+v <- c(1, 2, 3, 4, 5)
+count <- 0
+for (i in 1:length(v)) {
+    x <- v[v != i]
+    for (j in 1:length(x)) {
+        print(c(i, x[j]))
+        count <- count + 1
+    }
+}
+print(count)
+
+# 2.13
+v <- c(1, 2, 3, 4, 5)
+count <- 0
+for (i in 1:(length(v) - 1)) {
+    for (j in (i + 1):length(v)) {
+        print(c(i, j))
+        count <- count + 1
+    }
+}
+print(count)
+
+# 2.14
+install.packages('gtools')
+library(gtools)
+
+v <- c(1, 2, 3, 4, 5)
+p <- permutations(n=5, r=2, v=v, repeats.allowed=F)
+p
+nrow(p)
+
+v <- c(1, 2, 3, 4, 5)
+c <- combinations(n=5, r=2, v=v, repeats.allowed=F)
+c
+nrow(c)
