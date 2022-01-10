@@ -1,10 +1,11 @@
 # 7.1
 
 head(iris)
+str(iris)
+summary(iris)
 
-y <- subset(iris, Species == 'setosa')$Petal.Length
+y <- subset(iris, Species=='setosa')$Petal.Length
 y
-
 mean(y)
 sd(y)
 
@@ -46,9 +47,7 @@ sqrt(var(y)*(n-1) / qchisq(.025, n-1))
 # 7.4
 
 x <- subset(iris, Species == 'virginica')$Petal.Length
-x
 y <- subset(iris, Species == 'versicolor')$Petal.Length
-y
 
 n_sim <- 10000
 difs <- c()
