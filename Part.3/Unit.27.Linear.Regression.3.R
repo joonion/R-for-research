@@ -1,4 +1,4 @@
-# Unit 26: Linear Regression (3)
+# Unit 26. Linear Regression 3. 
 
 windows(width = 7, height = 5)
 

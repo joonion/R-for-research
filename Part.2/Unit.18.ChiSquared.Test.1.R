@@ -1,5 +1,8 @@
 # Unit 18. Chi-Square Test
 
+?chisq.test
+??course
+
 library(vcd)
 data(package = "vcd")
 ?Arthritis
@@ -20,6 +23,7 @@ with(Arthritis, chisq.test(Treatment, Improved))
 
 arth.tab <- xtabs(~ Improved + Treatment, data = Arthritis)
 mosaic(arth.tab, gp = shading_max)
+
 # Independence Test
 
 str(Titanic)
@@ -42,7 +46,7 @@ table(survey$Fold, survey$Sex)
 cross.tab <- table(survey$Fold, survey$Sex)
 chisq.test(cross.tab)
 
-# 적합성 검정: Goodness-of-Fit
+# Goodness-of-Fit
 
 str(HairEyeColor)
 margin.table(HairEyeColor, margin = 1)
