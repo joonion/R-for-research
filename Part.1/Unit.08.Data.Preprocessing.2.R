@@ -9,8 +9,10 @@ subset(iris, subset = Species == "setosa")
 subset(iris, subset = Sepal.Length > 7.5)
 subset(iris, subset = Sepal.Length > 7.5 & Sepal.Width > 3.0)
 subset(iris, 
-       subset = Sepal.Length > 7.5 & Sepal.Width > 3.0,
+       subset = Sepal.Length > 7.5 & Sepal.Width > 3.0, 
        select = c(1, 2, 5))
+
+subset(iris, Sepal.Length > 7.5, c(1, 2, 5))
 
 ?split
 split(iris, f = iris$Species)
@@ -27,8 +29,9 @@ aggregate(df, by = list(Species=iris$Species), FUN = mean)
 aggregate(df, by = list(Species=iris$Species), FUN = sd)
 
 str(mtcars)
-df <- subset(mtcars, select = c("mpg", "cyl", "gear"))
-aggregate(df, by = list(cyl=mtcars$cyl, gear=mtcars$gear), 
+df <- subset(mtcars, select = c("mpg", "hp", "wt"))
+aggregate(df, 
+          by = list(cyl=mtcars$cyl, gear=mtcars$gear), 
           FUN = mean)
 
 df.split <- split(iris, f = iris$Species)
@@ -61,6 +64,8 @@ sort(mtcars$mpg, decreasing = T)
 
 ?order
 order(mtcars$mpg)
+order(mtcars$mpg, decreasing = T)
+
 ord <- order(mtcars$mpg, decreasing = T)
 mtcars[ord, 1:6]
 mtcars[ord[1:10], 1:6]
@@ -68,9 +73,9 @@ n <- length(ord)
 mtcars[ord[(n-10):n], 1:6]
 
 ord <- order(iris$Petal.Length, iris$Sepal.Length)
-head(iris[ord, c(3, 1)])
+head(iris[ord, c(3, 1)], n = 3)
 ord <- order(iris$Petal.Length, -iris$Sepal.Length)
-head(iris[ord, c(3, 1)])
+head(iris[ord, c(3, 1)], n = 3)
 
 
 
