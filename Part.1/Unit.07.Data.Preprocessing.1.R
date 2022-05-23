@@ -1,7 +1,5 @@
 # Unit 7. Data Preprocessing (1) Missing Values and Anormalies 
 
-windows(width = 7, height = 5)
-
 x <- c(45, NA, 87, 63, 55, NA, 72, 61, 59, 68)
 x
 

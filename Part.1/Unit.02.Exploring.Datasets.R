@@ -1,7 +1,5 @@
 # Unit 2. Exploring Datasets
 
-windows(width = 7, height = 5)
-
 ?iris
 
 str(iris)

@@ -1,0 +1,74 @@
+---
+title: "Doing Reproducible Research with R"
+author: "Joonion Bae"
+date: '2022-05-23'
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Writing with Markdown
+
+Publish or perish! \
+\
+This is an **important** note to a *researcher*. \
+
+### Publish or perish!  
+
+#### Publish or perish!  
+
+##### Publish or perish!  
+
+How to publish not to be perished?
+
+1. Do your research.
+2. Write your paper.
+3. Submit to a journal
+    - If accepted, goto 1.
+    - If not accpted, goto 1.
+
+R 마크다운 문서는 마크다운 문법을 사용합니다. 마크다운은 아주 간단한 문법으로 문서의 형식을 지정할 수 있으며, HTML, PDF, Word 문서로의 변환도 간단합니다. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+RStudio의 상단에 있는 **Knit** 버튼을 누르면 HTML, PDF, Word 문서를 생성할 수 있습니다. 
+
+### 분석결과 포함하기
+
+```{r summary}
+library(palmerpenguins)
+library(tidyverse)
+penguins %>%
+    group_by(species) %>%
+    summarise(across(where(is.numeric), mean, na.rm = T))
+```
+
+### 표와 그림 포함하기
+
+마크다운 문서 안에 **표**도 포함할 수 있습니다.
+
+```{r tables}
+library(stargazer)
+stargazer(data.frame(penguins), type="text")
+```
+
+마크다운 문서 안에 **그림**도 포함할 수 있습니다.
+
+```{r figures, echo=FALSE}
+ggplot(data = penguins, 
+       mapping = aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point(aes(color = species, shape = species), size = 3, alpha = 0.8) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(title = "Penguin size, Palmer Station LTER",
+       subtitle = "Flipper length and body mass for Adelie, Chinstrap and Gentoo Penguins",
+       x = "Flipper length (mm)",
+       y = "Body mass (g)",
+       color = "Penguin species",
+       shape = "Penguin species") +
+  theme_minimal()
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
