@@ -21,6 +21,32 @@ xlim <- c(xlim[1], xlim, tail(xlim, 1))
 ylim <- c(0, ylim, 0) 
 polygon(xlim, ylim, col="grey")
 
+# exercise 15.1
+
+x <- seq(10000, 50000, length=200)
+y <- dnorm(x, mean = 30000, sd = 10000)
+plot(x, y, type='l',
+     main="$25000 ~ $35000 사이에 있을 확률")
+
+xlim <- x[10000<=x & x<=25000]
+ylim <- y[10000<=x & x<=25000]
+xlim <- c(xlim[1], xlim, tail(xlim, 1))
+ylim <- c(0, ylim, 0) 
+polygon(xlim, ylim, col="grey")
+
+x <- seq(10000, 50000, length=200)
+y <- dnorm(x, mean = 30000, sd = 10000)
+plot(x, y, type='l',
+     main="$25000 ~ $35000 사이에 있을 확률")
+
+xlim <- x[35000<=x & x<=50000]
+ylim <- y[35000<=x & x<=50000]
+xlim <- c(xlim[1], xlim, tail(xlim, 1))
+ylim <- c(0, ylim, 0) 
+polygon(xlim, ylim, col="grey")
+
+# end of exercise 15.1
+
 1 - pnorm(70, 60, 10)
 1 - pnorm(80, 70, 20)
 z1 <- (70 - 60) / 10
