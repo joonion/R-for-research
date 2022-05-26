@@ -1,7 +1,5 @@
 # Unit 13. Statistical Analysis
 
-windows(width = 7, height = 5)
-
 library(MASS)
 str(survey)
 ?survey

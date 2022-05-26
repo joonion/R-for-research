@@ -1,6 +1,4 @@
-# Unit 14. Probability Distribution
-
-windows(width = 7, height = 5)
+# Unit 16. Probability Distribution (2)
 
 # uniform distribution
 ?runif
