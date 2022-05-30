@@ -1,6 +1,4 @@
-# Unit 15. Hypothesis Test
-
-windows(width = 7, height = 5)
+# Unit 17. Hypothesis Test
 
 height <- survey$Height
 h.mean <- mean(height, na.rm = T)
