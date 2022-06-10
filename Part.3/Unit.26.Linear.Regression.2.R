@@ -1,10 +1,7 @@
 # Unit 26: Linear Regression (2)
 
-windows(width = 7, height = 5)
-
 ?lm
 
-# install.packages(car)
 library(car)
 str(Prestige)
 

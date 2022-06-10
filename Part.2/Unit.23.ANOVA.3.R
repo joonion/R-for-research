@@ -1,4 +1,4 @@
-# Unit 17. ANOVA (3): Repeated-Measures, ANCOVA, MANOVA
+# Unit 23. ANOVA (3): Repeated-Measures, ANCOVA, MANOVA
 
 # repeated-measures two-way ANOVA
 

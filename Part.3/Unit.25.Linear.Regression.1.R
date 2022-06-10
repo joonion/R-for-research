@@ -1,7 +1,5 @@
 # Unit 25: Linear Regression (1)
 
-windows(width = 7, height = 5)
-
 library(HistData)
 str(GaltonFamilies)
 

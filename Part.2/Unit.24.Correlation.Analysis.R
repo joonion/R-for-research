@@ -1,4 +1,4 @@
-# Unit 17. Correlation Analysis
+# Unit 24. Correlation Analysis
 
 library(MASS)
 str(cats)
