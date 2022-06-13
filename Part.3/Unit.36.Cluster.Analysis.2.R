@@ -49,3 +49,28 @@ mean(wine$Type == pam.clust$clustering)
 library(flexclust)          
 pam.result <- table(wine$Type, pam.clust$clustering, dnn = c("Actual", "Clustered"))
 randIndex(pam.result)
+
+# Time-series
+
+plot(co2, lwd=2, col="tomato",
+     main="Time Series Plot of CO2 Concentration")
+
+data(co2)
+str(co2)
+class(co2)
+head(co2)
+head(co2, 3*12)
+
+plot(co2, lwd=2, col="tomato")
+
+start(co2)
+end(co2)
+
+frequency(co2)
+time(co2)
+cycle(co2)
+
+window(co2, start = c(1990, 1), end=c(1995, 12))
+window(co2, start = c(1990, 1), frequency = 1)
+window(co2, start=c(1990, 1), frequency = 2)
+window(co2, start=c(1990, 1), frequency = 4)

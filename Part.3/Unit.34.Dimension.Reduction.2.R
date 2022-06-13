@@ -33,6 +33,6 @@ fa.scores <- fa$scores
 colnames(fa.scores) <- c("Run", "Throw")
 
 library(gplots)
+library(RColorBrewer)
 heatmap.2(fa.scores, col = brewer.pal(9, "GnBu"), trace = "none", key = F,
           dend = "none", cexCol = 1.2)
-??heatmap.2
