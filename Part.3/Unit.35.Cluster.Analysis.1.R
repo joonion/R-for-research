@@ -1,4 +1,4 @@
-# Unit 31. Cluster Analysis 1. Hierarchical Clustering
+# Unit 35. Cluster Analysis 1. Hierarchical Clustering
 
 library(flexclust)
 data(nutrient)

@@ -1,4 +1,4 @@
-# Unit 29. Dimension Reduction 1. Principal Component Analysis
+# Unit 33. Dimension Reduction 1. Principal Component Analysis
 
 str(state.x77)
 colnames(state.x77)

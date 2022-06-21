@@ -1,4 +1,4 @@
-# Unit 32. Cluster Analysis 2. k-means Clustering
+# Unit 36. Cluster Analysis 2. k-means Clustering
 
 str(state.x77)
 head(state.x77)

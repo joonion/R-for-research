@@ -1,4 +1,4 @@
-# Unit 26. Linear Regression 3. 
+# Unit 27. Linear Regression (3)
 
 ?mtcars
 
